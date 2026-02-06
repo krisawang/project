@@ -11,20 +11,15 @@ npm run dev
 
 Open `http://localhost:3000` to view the site.
 
-## 接单改版最短路径
-
-1. 只修改 `src/content/landing.ts` 的文案与模块内容。
-2. 在 `.env` 设置以下两个环境变量。
-3. 部署即可交付。
-
 ## Update copy & sections
 
 Edit these files to customize the content:
 
-- Home page sections: `src/content/landing.ts`
+- Home page sections: `src/app/page.tsx`
 - Privacy policy: `src/app/privacy/page.tsx`
 - Terms of service: `src/app/terms/page.tsx`
 - Metadata and social preview image: `src/app/layout.tsx` + `public/og-image.svg`
+- Update production URL in `src/app/layout.tsx`, `src/app/robots.ts`, and `src/app/sitemap.ts`
 
 ## Update the theme color
 
@@ -46,19 +41,11 @@ NEXT_PUBLIC_FORMSPREE_ENDPOINT=https://formspree.io/f/yourFormId
 
 > The contact section displays a reminder if the environment variable is missing.
 
-## Site URL configuration
-
-`NEXT_PUBLIC_SITE_URL` drives metadata, `robots.txt`, and `sitemap.xml`. Set it before deploying.
-
-```bash
-NEXT_PUBLIC_SITE_URL=https://project-nine-alpha-37.vercel.app
-```
-
 ## Deploy to Vercel
 
 1. Push the repository to GitHub.
 2. In Vercel, click **New Project** and import the repo.
-3. Set the `NEXT_PUBLIC_SITE_URL` and `NEXT_PUBLIC_FORMSPREE_ENDPOINT` environment variables.
+3. Set the `NEXT_PUBLIC_FORMSPREE_ENDPOINT` environment variable.
 4. Confirm the build settings (defaults work for Next.js).
 5. Deploy.
 

@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { siteConfig } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL("https://example.com"),
   title: "NovaEdge — AI-ready landing page template",
-  description: siteConfig.description,
+  description:
+    "NovaEdge is a modern landing page template for AI, SaaS, and professional services teams ready to launch fast.",
   openGraph: {
     title: "NovaEdge — AI-ready landing page template",
     description:
       "Launch a polished AI/SaaS landing page with clear value props, social proof, and conversion-ready sections.",
-    url: siteConfig.url,
-    siteName: siteConfig.name,
+    url: "/",
+    siteName: "NovaEdge",
     images: [
       {
         url: "/og-image.svg",
